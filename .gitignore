@@ -1,0 +1,7 @@
+# editor files
+.DS_Store
+.vscode
+
+# possible test files
+migrations
+*.load
