@@ -1,8 +1,8 @@
-FROM golang:1.22.3@sha256:6d71b7c3f884e7b9552bffa852d938315ecca843dcc75a86ee7000567da0923d
+FROM golang:1.27.1@sha256:3680233e3204827fbdc66088528ae6d4b3d034f51d03a99d454f6de034888244
 
 RUN apt update && apt install -y sbcl unzip libsqlite3-dev make curl gawk freetds-dev libzip-dev
 
-RUN git clone --branch=v3.6.9 https://github.com/dimitri/pgloader.git && \
+RUN git clone --branch=v3.6.10 https://github.com/dimitri/pgloader.git && \
     cd pgloader && \
     make && \
     mv build/bin/pgloader /bin && \
